@@ -16,13 +16,14 @@
     .align  1
     .globl  memcpy_simple
     .type   memcpy_simple, %function
-memcpy_simple:
+
     /* memcpy_simple.h 에서 정의된 함수, memcpy_simple 를 구현하라. */
     // 각 매개변수 전달을 위해 사용되는 레지스터
     //    void * destination : r0
     //    void * source      : r1
     //    size_t size        : r2
     // 사용 명령: movs, cmp, beq, strb, adds, b, bx, ldrb, push, pop
+memcpy_simple:
     push    {r4, r5}        // r4, r5 레지스터를 스택에 저장
     movs    r5, r0          // r5에 r0(destination) 저장
 
